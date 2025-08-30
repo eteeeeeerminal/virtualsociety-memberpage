@@ -180,7 +180,7 @@
     --sns-list-margin-top: 2px;
 
     /* 右側要素のスタイル変数（小画面用） */
-    --right-padding: 2px 8px 10px;
+    --right-padding: 2px 8px 6px;
     --right-gap: 4px;
     --name-font-size: 24px;
     --tag-gap: 4px;
