@@ -2,6 +2,20 @@
   --title-color: #ffffff;
   max-width: 1024px;
   margin: 0 auto;
+
+  --accent-color-1: rgb(248, 112, 112);
+  --accent-color-2: rgb(252, 114, 183);
+  --accent-color-3: rgb(248, 118, 248);
+  --accent-color-4: rgb(179, 104, 255);
+  --accent-color-5: rgb(98, 98, 247);
+  --accent-color-6: rgb(110, 183, 255);
+  --accent-color-7: rgb(83, 208, 233);
+  --accent-color-8: rgb(78, 235, 156);
+  --accent-color-9: rgb(58, 196, 58);
+  --accent-color-10: rgb(172, 211, 81);
+  --accent-color-11: rgb(221, 221, 52);
+  --accent-color-12: rgb(248, 179, 109);
+  --accent-color-0: gray;
 }
 
 .member-page h1 {
@@ -13,11 +27,58 @@
 }
 
 .member-team-list:nth-of-type(1) {
-  --accent-color: #0000ff;
+  --accent-color: var(--accent-color-1);
 }
-
 .member-team-list:nth-of-type(2) {
-  --accent-color: #ff0000;
+  --accent-color: var(--accent-color-2);
+}
+.member-team-list:nth-of-type(3) {
+  --accent-color: var(--accent-color-3);
+}
+.member-team-list:nth-of-type(4) {
+  --accent-color: var(--accent-color-4);
+}
+.member-team-list:nth-of-type(5) {
+  --accent-color: var(--accent-color-5);
+}
+.member-team-list:nth-of-type(6) {
+  --accent-color: var(--accent-color-6);
+}
+.member-team-list:nth-of-type(7) {
+  --accent-color: var(--accent-color-7);
+}
+.member-team-list:nth-of-type(8) {
+  --accent-color: var(--accent-color-8);
+}
+.member-team-list:nth-of-type(9) {
+  --accent-color: var(--accent-color-9);
+}
+.member-team-list:nth-of-type(10) {
+  --accent-color: var(--accent-color-10);
+}
+.member-team-list:nth-of-type(11) {
+  --accent-color: var(--accent-color-11);
+}
+.member-team-list:nth-of-type(12) {
+  --accent-color: var(--accent-color-12);
+}
+.member-team-list:nth-of-type(13) {
+  --accent-color: var(--accent-color-0);
+}
+.member-team-list:nth-of-type(14) {
+  --accent-color: var(--accent-color-0);
+}
+.member-team-list:nth-of-type(15) {
+  --accent-color: var(--accent-color-0);
+}
+.member-tema-list:nth-of-type(16) {
+  --accent-color: var(--accent-color-0);
+}
+.member-team-list:nth-of-type(17) {
+  --accent-color: var(--accent-color-0);
+}
+.member-team-list:nth-of-type(18) {
+  --accent-color: var(--accent-color-0);
 }
 
 .member-team-list h2 {
@@ -132,7 +193,6 @@
   padding: var(--tag-padding);
   border-radius: var(--tag-border-radius);
   font-size: var(--tag-font-size);
-  font-weight: 500;
   margin: 0;
   line-height: 1.1;
   white-space: nowrap;
@@ -186,7 +246,7 @@
     --right-gap: 4px;
     --name-font-size: 24px;
     --tag-gap: 4px;
-    --tag-padding: 3px 6px;
+    --tag-padding: 3px 9px;
     --tag-border-radius: 10px;
     --tag-font-size: 11px;
     --comment-font-size: 14px;
