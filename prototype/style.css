@@ -91,16 +91,81 @@
 
 .member-card__right {
   width: 50%;
+  padding: var(--right-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: var(--right-gap);
+}
+
+.member-card__name-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: calc(var(--name-font-size) * 1.2 * 2);
+  flex-shrink: 0;
+}
+
+.member-card__name__text {
+  padding-right: 6px;
+
+  color: #333;
+  font-weight: bold;
+  font-size: var(--name-font-size);
+
+  text-align: left;
+  word-break: break-word;
+  line-height: 1.1;
+}
+
+.member-card__team-tag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--tag-gap);
+}
+
+.member-card__team-tag__item {
+  background-color: var(--accent-color);
+  color: white;
+  padding: var(--tag-padding);
+  border-radius: var(--tag-border-radius);
+  font-size: var(--tag-font-size);
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.member-card__comment {
+  font-size: var(--comment-font-size);
+  color: #666;
+  line-height: 1.3;
+  margin: 0;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  overflow: auto;
+  scrollbar-width: thin;
 }
 
 @media (min-width: 1024px) {
   .member-card-list {
     --card-width: 480px;
 
+    /* 左側要素のスタイル変数 */
     --left-margin: 6px;
     --sns-list-height: 48px;
     --sns-list-gap: 24px;
     --sns-list-margin-top: 6px;
+
+    /* 右側要素のスタイル変数 */
+    --right-padding: 32px 12px 16px;
+    --right-gap: 12px;
+    --name-font-size: 18px;
+    --tag-gap: 6px;
+    --tag-padding: 4px 8px;
+    --tag-border-radius: 12px;
+    --tag-font-size: 12px;
+    --comment-font-size: 20px;
   }
 }
 
@@ -108,9 +173,20 @@
   .member-card-list {
     --card-width: 340px;
 
+    /* 左側要素のスタイル変数 */
     --left-margin: 4px;
     --sns-list-height: 36px;
     --sns-list-gap: 12px;
     --sns-list-margin-top: 2px;
+
+    /* 右側要素のスタイル変数（小画面用） */
+    --right-padding: 2px 8px 10px;
+    --right-gap: 4px;
+    --name-font-size: 24px;
+    --tag-gap: 4px;
+    --tag-padding: 3px 6px;
+    --tag-border-radius: 10px;
+    --tag-font-size: 11px;
+    --comment-font-size: 14px;
   }
 }
