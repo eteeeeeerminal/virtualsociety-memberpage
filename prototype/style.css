@@ -158,13 +158,13 @@
     --sns-list-margin-top: 6px;
 
     /* 右側要素のスタイル変数 */
-    --right-padding: 32px 12px 16px;
-    --right-gap: 12px;
-    --name-font-size: 18px;
-    --tag-gap: 6px;
-    --tag-padding: 4px 8px;
+    --right-padding: 4px 14px 12px;
+    --right-gap: 6px;
+    --name-font-size: 32px;
+    --tag-gap: 8px;
+    --tag-padding: 4px 12px;
     --tag-border-radius: 12px;
-    --tag-font-size: 12px;
+    --tag-font-size: 16px;
     --comment-font-size: 20px;
   }
 }
