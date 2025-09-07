@@ -66,6 +66,46 @@
   --accent-color: var(--accent-color-0);
 }
 
+.member-card__team-tag__item.color-1 {
+  --accent-color: var(--accent-color-1);
+}
+.member-card__team-tag__item.color-2 {
+  --accent-color: var(--accent-color-2);
+}
+.member-card__team-tag__item.color-3 {
+  --accent-color: var(--accent-color-3);
+}
+.member-card__team-tag__item.color-4 {
+  --accent-color: var(--accent-color-4);
+}
+.member-card__team-tag__item.color-5 {
+  --accent-color: var(--accent-color-5);
+}
+.member-card__team-tag__item.color-6 {
+  --accent-color: var(--accent-color-6);
+}
+.member-card__team-tag__item.color-7 {
+  --accent-color: var(--accent-color-7);
+}
+.member-card__team-tag__item.color-8 {
+  --accent-color: var(--accent-color-8);
+}
+.member-card__team-tag__item.color-9 {
+  --accent-color: var(--accent-color-9);
+}
+.member-card__team-tag__item.color-10 {
+  --accent-color: var(--accent-color-10);
+}
+.member-card__team-tag__item.color-11 {
+  --accent-color: var(--accent-color-11);
+}
+.member-card__team-tag__item.color-12 {
+  --accent-color: var(--accent-color-12);
+}
+.member-card__team-tag__item.color-0 {
+  --accent-color: var(--accent-color-0);
+}
+
 .member-team-list h2 {
   font-size: 40px;
   font-weight: bold;
