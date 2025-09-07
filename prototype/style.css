@@ -26,58 +26,43 @@
   margin-bottom: 36px;
 }
 
-.member-team-list:nth-of-type(1) {
+.member-team-list.color-1 {
   --accent-color: var(--accent-color-1);
 }
-.member-team-list:nth-of-type(2) {
+.member-team-list.color-2 {
   --accent-color: var(--accent-color-2);
 }
-.member-team-list:nth-of-type(3) {
+.member-team-list.color-3 {
   --accent-color: var(--accent-color-3);
 }
-.member-team-list:nth-of-type(4) {
+.member-team-list.color-4 {
   --accent-color: var(--accent-color-4);
 }
-.member-team-list:nth-of-type(5) {
+.member-team-list.color-5 {
   --accent-color: var(--accent-color-5);
 }
-.member-team-list:nth-of-type(6) {
+.member-team-list.color-6 {
   --accent-color: var(--accent-color-6);
 }
-.member-team-list:nth-of-type(7) {
+.member-team-list.color-7 {
   --accent-color: var(--accent-color-7);
 }
-.member-team-list:nth-of-type(8) {
+.member-team-list.color-8 {
   --accent-color: var(--accent-color-8);
 }
-.member-team-list:nth-of-type(9) {
+.member-team-list.color-9 {
   --accent-color: var(--accent-color-9);
 }
-.member-team-list:nth-of-type(10) {
+.member-team-list.color-10 {
   --accent-color: var(--accent-color-10);
 }
-.member-team-list:nth-of-type(11) {
+.member-team-list.color-11 {
   --accent-color: var(--accent-color-11);
 }
-.member-team-list:nth-of-type(12) {
+.member-team-list.color-12 {
   --accent-color: var(--accent-color-12);
 }
-.member-team-list:nth-of-type(13) {
-  --accent-color: var(--accent-color-0);
-}
-.member-team-list:nth-of-type(14) {
-  --accent-color: var(--accent-color-0);
-}
-.member-team-list:nth-of-type(15) {
-  --accent-color: var(--accent-color-0);
-}
-.member-tema-list:nth-of-type(16) {
-  --accent-color: var(--accent-color-0);
-}
-.member-team-list:nth-of-type(17) {
-  --accent-color: var(--accent-color-0);
-}
-.member-team-list:nth-of-type(18) {
+.member-team-list.color-0 {
   --accent-color: var(--accent-color-0);
 }
 
