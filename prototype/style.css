@@ -152,6 +152,8 @@
 
 .member-card__icon {
   border-radius: 36px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -174,6 +176,8 @@
 .member-card__sns-list__item img {
   width: 100%;
   height: 100%;
+  max-width: var(--sns-list-height);
+  aspect-ratio: 1;
   object-fit: cover;
 }
 
