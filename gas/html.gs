@@ -6,7 +6,6 @@
 function generateHTML(allMemberListsByTeam) {
   return `
   <div class="member-page">
-    <h1>運営メンバー</h1>
     ${
     Object
       .entries(allMemberListsByTeam)
@@ -89,9 +88,7 @@ function generateSNSLinkHTML(snsLink) {
 
   return `
   <li class="member-card__sns-list__item">
-    <a href="${snsLink}" target="_blank" rel="noopener noreferrer">
-      <img src="${iconURL}" alt="${platform}アイコン">
-    </a>
+    <a href="${snsLink}" target="_blank" rel="noopener noreferrer"><img src="${iconURL}" alt="${platform}アイコン"></a>
   </li>
   `
 }
