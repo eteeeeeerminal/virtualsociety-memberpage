@@ -75,17 +75,17 @@ const config = {
   supportSNSList: [
     {
       name: "x",
-      urlPattern: "https://x.com/([a-zA-Z0-9_]+)",
+      urlPattern: "https://x.com/([a-zA-Z0-9_@]+)",
       iconUrl: "https://www.vconf.org/2025/wp-content/uploads/2025/09/logo-black-with-padding.png",
     },
     {
       name: "youtube",
-      urlPattern: "https://www.youtube.com/([a-zA-Z0-9_]+)",
+      urlPattern: "https://www.youtube.com/([a-zA-Z0-9_@]+)",
       iconUrl: "https://www.vconf.org/2025/wp-content/uploads/2025/09/yt_icon_rgb.png",
     },
     {
       name: "webサイト",
-      urlPattern: "https://([a-zA-Z0-9_]+)",
+      urlPattern: "https://([a-zA-Z0-9_@]+)",
       iconUrl: "https://www.vconf.org/2025/wp-content/uploads/2025/09/icon_internet.png",
     }
   ]
