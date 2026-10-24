@@ -8,9 +8,13 @@ function generateMemberPage() {
   const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
   const sheet = spreadsheet.getActiveSheet();
 
-  const memberLists = getAllMemberListsByTeamFromSheet(sheet);
+  // 外部メンバーは運営メンバーと分けて扱う
+  const {
+    [config.guestTeamName]: guests = [],
+    ...memberLists
+  } = getAllMemberListsByTeamFromSheet(sheet);
 
-  const html = generateHTML(memberLists);
+  const html = generateHTML(memberLists, guests);
 
   const file = DriveApp.createFile("member-page.html", html, "text/html");
   console.log(file.getUrl());

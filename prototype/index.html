@@ -6,10 +6,15 @@
     <title>Prototype</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <!-- WP テーマ側のスタイルの代用 (本番には貼らない) -->
+    <link rel="stylesheet" href="wp-mock.css">
 </head>
 <body>
+  <!-- WP のページタイトル -->
+  <h1 class="wp-block-post-title">運営メンバー</h1>
+
+  <!-- ここから GAS の出力 -->
   <div class="member-page">
-    <h1>運営メンバー</h1>
     
   <div class="member-team-list color-4">
     <h2>Web班</h2>
@@ -80,8 +85,31 @@
   
     </div>
   </div>
-  
+
+  <hr class="member-page__divider">
   </div>
-  
+  <h1 class="wp-block-post-title">外部協力</h1>
+  <div class="member-page">
+  <div class="guest-card-list">
+    <article class="guest-card hvr-grow">
+      <p class="guest-card__role">PRマンガ</p>
+      <p class="guest-card__name">山田花子<span class="guest-card__honorific">様</span></p>
+    </article>
+    <article class="guest-card hvr-grow">
+      <p class="guest-card__role">当日スタッフ</p>
+      <p class="guest-card__name">佐藤一郎<span class="guest-card__honorific">様</span></p>
+    </article>
+    <article class="guest-card hvr-grow">
+      <p class="guest-card__role">クロージング動画作成</p>
+      <p class="guest-card__name">とても長い名前の動画クリエイター<span class="guest-card__honorific">様</span></p>
+    </article>
+    <article class="guest-card hvr-grow">
+      <p class="guest-card__role">カメラマン</p>
+      <p class="guest-card__name">鈴木<span class="guest-card__honorific">様</span></p>
+    </article>
+  </div>
+
+  </div>
+
 </body>
 </html>

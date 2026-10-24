@@ -3,90 +3,61 @@
 const config = {
   teamList: [
     {
-      name: "実行委員長",
+      name: "運営委員長",
       color: "color-1",
     },
     {
-      name: "渉外班",
+      name: "運営総括",
+      color: "color-1",
+    },
+    {
+      name: "UX",
       color: "color-2",
     },
     {
-      name: "出版班",
+      name: "広報",
       color: "color-3",
     },
     {
-      name: "Web班",
+      name: "講演等企画",
       color: "color-4",
     },
     {
-      name: "UX班",
+      name: "ウェブ",
       color: "color-5",
     },
     {
-      name: "広報班",
+      name: "出版",
       color: "color-6",
     },
     {
-      name: "配信班",
+      name: "配信",
       color: "color-7",
-    },
-    {
-      name: "会場制作班",
-      color: "color-8",
-    },
-    {
-      name: "情報管理班",
-      color: "color-9",
-    },
-    {
-      name: "英語対応班",
-      color: "color-10",
-    },
-    {
-      name: "デザイン班",
-      color: "color-11",
     },
     {
       name: "バーチャル学会班",
       color: "color-12",
     },
-    {
-      name: "当日スタッフ",
-      color: "color-0",
-    },
-    {
-      name: "配信者",
-      color: "color-0",
-    },
-    {
-      name: "カメラマン",
-      color: "color-0",
-    },
-    {
-      name: "クロージング動画作成",
-      color: "color-0",
-    },
-    {
-      name: "その他",
-      color: "color-0",
-    },
   ],
+  // 班1 がこの名前のメンバーは外部メンバーとして、運営メンバーとは別枠で表示する (班2 に役割を書く)
+  // 外部メンバーの見出しの文言にもこの値を使う
+  guestTeamName: "運営協力",
   // TODO: SNS のアイコン画像適切な URL に差し替え
   supportSNSList: [
     {
       name: "x",
       urlPattern: "https://x.com/([a-zA-Z0-9_@]+)",
-      iconUrl: "https://www.vconf.org/2025/wp-content/uploads/2025/09/logo-black-with-padding.png",
+      iconUrl: "https://www.vconf.org/2026/wp-content/uploads/2026/04/icon_x.png",
     },
     {
       name: "youtube",
       urlPattern: "https://www.youtube.com/([a-zA-Z0-9_@]+)",
-      iconUrl: "https://www.vconf.org/2025/wp-content/uploads/2025/09/yt_icon_rgb.png",
+      iconUrl: "https://www.vconf.org/2026/wp-content/uploads/2026/04/icon_youtube.png",
     },
     {
       name: "webサイト",
       urlPattern: "https://([a-zA-Z0-9_@]+)",
-      iconUrl: "https://www.vconf.org/2025/wp-content/uploads/2025/09/icon_internet.png",
+      iconUrl: "https://www.vconf.org/2026/wp-content/uploads/2026/04/icon_internet.png",
     }
   ]
 }

@@ -18,14 +18,6 @@
   --accent-color-0: gray;
 }
 
-.member-page h1 {
-  font-size: 48px;
-  font-weight: normal;
-  text-align: center;
-  margin-top: 12px;
-  margin-bottom: 36px;
-}
-
 .member-team-list.color-1 {
   --accent-color: var(--accent-color-1);
 }
@@ -238,6 +230,109 @@
   height: calc(100% + 4px);
   overflow: auto;
   scrollbar-width: thin;
+}
+
+/* 外部メンバー */
+/* reset css (.member-page *) と詳細度が同じになり読み込み順で負けうるため、member-page を付与している */
+.member-page .member-page__divider {
+  border: none;
+  border-top: 2px solid #ccc;
+  max-width: 720px;
+  margin: 0 auto 24px;
+}
+
+/* 並びは member-card-list に合わせる */
+.guest-card-list {
+  --accent-color: var(--accent-color-0);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--guest-card-width), 1fr));
+  gap: 20px;
+  justify-items: center;
+  width: fit-content;
+  max-width: 100%;
+  /* 見出し (WP 側で下余白 0 になる) との間隔をこちらで確保する */
+  margin: 36px auto 120px;
+}
+
+/* 奇数個の要素の最後の1つを中央配置 */
+.guest-card:nth-child(odd):last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.guest-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: var(--guest-card-width);
+
+  border-radius: 24px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+/*
+ * 枠線を役割の帯の上に重ねて描く
+ * (通常の border だと帯との境目にアンチエイリアスで白い線が見えるため)
+ * reset css (.member-page ::after) に負けないよう member-page を付与している
+ */
+.member-page .guest-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 4px solid var(--accent-color);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.guest-card__role {
+  background-color: var(--accent-color);
+  color: white;
+  padding: var(--guest-role-padding);
+  font-size: var(--guest-role-font-size);
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* reset css の影響があるため、member-page を付与している */
+.member-page .guest-card__name {
+  margin: auto 0;
+  padding: var(--guest-padding);
+  color: #333;
+  font-weight: bold;
+  font-size: var(--guest-name-font-size);
+  text-align: center;
+  word-break: break-word;
+  line-height: 1.2;
+}
+
+.guest-card__honorific {
+  margin-left: 0.2em;
+  font-size: 0.75em;
+  font-weight: normal;
+}
+
+@media (min-width: 1024px) {
+  .guest-card-list {
+    --guest-card-width: 480px;
+    --guest-padding: 20px 16px 24px;
+    --guest-role-padding: 10px 12px 6px; /* 上は枠線に隠れる 4px を足している */
+    --guest-role-font-size: 18px;
+    --guest-name-font-size: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .guest-card-list {
+    --guest-card-width: 340px;
+    --guest-padding: 16px 16px 20px;
+    --guest-role-padding: 9px 12px 5px; /* 上は枠線に隠れる 4px を足している */
+    --guest-role-font-size: 17px;
+    --guest-name-font-size: 22px;
+  }
 }
 
 @media (min-width: 1024px) {

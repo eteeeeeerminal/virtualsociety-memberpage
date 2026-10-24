@@ -1,0 +1,8 @@
+/* WP テーマ側のスタイルの代用 (本番には貼らない) */
+.wp-block-post-title {
+  font-size: 48px;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 36px;
+}

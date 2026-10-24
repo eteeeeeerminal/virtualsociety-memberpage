@@ -1,9 +1,11 @@
 /**
  * メンバーページのHTMLを生成
- * @param {Object} allMemberListsByTeam 班ごとのメンバーデータのオブジェクト
+ * @param {Object} allMemberListsByTeam 班ごとのメンバーデータのオブジェクト (外部メンバーを除く)
+ * @param {Array} guests 外部メンバーのデータの配列
  * @return {string} メンバーページのHTML
  */
-function generateHTML(allMemberListsByTeam) {
+function generateHTML(allMemberListsByTeam, guests) {
+  const hasGuests = guests.length > 0;
   return `
   <div class="member-page">
     ${
@@ -14,7 +16,43 @@ function generateHTML(allMemberListsByTeam) {
       )
       .join("")
     }
+    ${hasGuests ? `<hr class="member-page__divider">` : ""}
   </div>
+  ${hasGuests ? generateGuestSectionHTML(guests) : ""}
+  `
+}
+
+/**
+ * 外部メンバーのHTMLを生成
+ * 見出しは WP のページタイトルと見た目を揃えるため、member-page の外に置き同じ class を付与している
+ * @param {Array} guests 外部メンバーのデータの配列
+ * @return {string} 外部メンバーのHTML
+ */
+function generateGuestSectionHTML(guests) {
+  const guestCardHTMLList = guests
+    .map((guest) => generateGuestCardHTML(guest))
+    .join("");
+  return `
+  <h1 class="wp-block-post-title">${config.guestTeamName}</h1>
+  <div class="member-page">
+    <div class="guest-card-list">
+      ${guestCardHTMLList}
+    </div>
+  </div>
+  `
+}
+
+/**
+ * 外部メンバーのカードのHTMLを生成
+ * @param {Object} guest メンバーデータのオブジェクト (team2 に役割が入っている)
+ * @return {string} 外部メンバーのカードのHTML
+ */
+function generateGuestCardHTML(guest) {
+  return `
+  <article class="guest-card hvr-grow">
+    <p class="guest-card__role">${guest.team2}</p>
+    <p class="guest-card__name">${guest.name}<span class="guest-card__honorific">様</span></p>
+  </article>
   `
 }
 
