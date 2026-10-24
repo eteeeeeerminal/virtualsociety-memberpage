@@ -48,7 +48,7 @@ function generateMemberCardHTML(member) {
   const snsLinksHTML = generateSNSLinksHTML(member.snsLinks);
   const teamTagsHTML = generateTeamTagsHTML(member.team1, member.team2);
   return `
-  <article class="member-card">
+  <article class="member-card hvr-grow">
     <div class="member-card__left">
       <img class="member-card__icon" src="${member.iconUrl}" alt="${member.name}のアイコン">
       ${snsLinksHTML}
